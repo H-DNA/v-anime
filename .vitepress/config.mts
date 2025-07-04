@@ -15,6 +15,7 @@ export default defineConfig({
       {
         text: 'Examples',
         items: [
+          { text: 'Spinner', link: '/examples/spinner' },
         ]
       }
     ],
