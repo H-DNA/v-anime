@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "V-Anime"
   text: "Examples of JS animations"
-  tagline: My great project tagline
+  tagline:
   actions:
     - theme: brand
       text: Examples
