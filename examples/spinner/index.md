@@ -2,7 +2,7 @@
 
 This showcases some ways to build some simple spinners.
 
-## Circular spinner
+## Circular Spinner
 
 <div class="circular-spinner">
 </div>
