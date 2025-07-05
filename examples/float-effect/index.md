@@ -1,3 +1,13 @@
+---
+next:
+  text: 'Spinner'
+  link: '/examples/spinner'
+
+prev:
+  text: 'Examples'
+  link: '/examples'
+---
+
 # Float Effect
 
 This showcases some ways to make objects look like they're floating.
@@ -38,7 +48,7 @@ This showcases some ways to make objects look like they're floating.
 }
 </style>
 
-## Solution
+### Solution
 
 ```html
 <div class="float"></div>

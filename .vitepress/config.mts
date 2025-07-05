@@ -17,6 +17,7 @@ export default defineConfig({
         items: [
           { text: 'Float Effect', link: '/examples/float-effect' },
           { text: 'Spinner', link: '/examples/spinner' },
+          { text: 'Typing Text', link: '/examples/typing-text' },
         ]
       }
     ],

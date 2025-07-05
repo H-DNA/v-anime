@@ -1,3 +1,13 @@
+---
+next:
+  text: 'Typing Text'
+  link: '/examples/typing-text'
+
+prev:
+  text: 'Float Effect'
+  link: '/examples/float-effect'
+---
+
 # Spinner
 
 This showcases some ways to build some simple spinners.
