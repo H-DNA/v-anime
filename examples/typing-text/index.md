@@ -56,7 +56,7 @@ This one imperfectly simulate the animation in the link above because layout is 
     color: purple;
 
     animation-name: autotype;
-    animation-duration: 4s;
+    animation-duration: 4s; /* tunable: typing speed */
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
