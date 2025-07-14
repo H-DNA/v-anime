@@ -86,28 +86,32 @@ This showcases some ways to build some simple spinners.
 }
 </style>
 
-<script>
-window.addEventListener("load", () => {
-    const ctx = document.getElementById("circular-filling-spinner-canvas").getContext("2d");
-    ctx.lineWidth = 8;
-    ctx.strokeStyle = "#3498db";
-    ctx.lineCap = "round";
-    const height = 150;
-    const width = 150;
-    const rps = 0.5;
-    
-    function cfsDraw() {
-        ctx.clearRect(0, 0, width, height);
-        const s = Date.now() / 1000;
-        const progress = 2 / 3 * Math.sin(s * Math.PI * 1.9 * rps) + 1 / 3;
-        ctx.beginPath();
-        ctx.arc(width / 2, height / 2, width / 2.5, -Math.PI / 2, 3 * Math.PI / 2 * progress, true);
-        ctx.stroke();
+<script setup>
+import { onMounted } from 'vue';
+
+onMounted(() => {
+    window.addEventListener("load", () => {
+        const ctx = document.getElementById("circular-filling-spinner-canvas").getContext("2d");
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = "#3498db";
+        ctx.lineCap = "round";
+        const height = 150;
+        const width = 150;
+        const rps = 0.5;
         
-        window.requestAnimationFrame(cfsDraw); 
-    }
-    
-    window.requestAnimationFrame(cfsDraw);
+        function cfsDraw() {
+            ctx.clearRect(0, 0, width, height);
+            const s = Date.now() / 1000;
+            const progress = 2 / 3 * Math.sin(s * Math.PI * 1.9 * rps) + 1 / 3;
+            ctx.beginPath();
+            ctx.arc(width / 2, height / 2, width / 2.5, -Math.PI / 2, 3 * Math.PI / 2 * progress, true);
+            ctx.stroke();
+            
+            window.requestAnimationFrame(cfsDraw); 
+        }
+        
+        window.requestAnimationFrame(cfsDraw);
+    });
 });
 </script>
 
