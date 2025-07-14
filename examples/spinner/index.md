@@ -99,7 +99,7 @@ window.addEventListener("load", () => {
     function cfsDraw() {
         ctx.clearRect(0, 0, width, height);
         const s = Date.now() / 1000;
-        const progress = 2 / 3 * Math.sin(s * Math.PI * 2 * rps) + 1 / 3;
+        const progress = 2 / 3 * Math.sin(s * Math.PI * 1.9 * rps) + 1 / 3;
         ctx.beginPath();
         ctx.arc(width / 2, height / 2, width / 2.5, -Math.PI / 2, 3 * Math.PI / 2 * progress, true);
         ctx.stroke();
@@ -110,3 +110,54 @@ window.addEventListener("load", () => {
     window.requestAnimationFrame(cfsDraw);
 });
 </script>
+
+### Solution
+
+```html
+<div class="spinner">
+</div>
+```
+
+```css
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    animation-name: spin;
+    animation-duration: 4s; /* tunable: spin speed */
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+```
+
+```js
+window.addEventListener("load", () => {
+    const ctx = document.getElementById("circular-filling-spinner-canvas").getContext("2d");
+    ctx.lineWidth = 8; /* tunable: stroke width */
+    ctx.strokeStyle = "#3498db"; /* tunable: stroke color */
+    ctx.lineCap = "round";
+    const height = 150; /* tunable: height */
+    const width = 150; /* tunable: width */
+    const rps = 0.5; /* tunable: round per second */
+    
+    function draw() {
+        ctx.clearRect(0, 0, width, height);
+        const s = Date.now() / 1000;
+        const progress = 2 / 3 * Math.sin(s * Math.PI * 1.9 * rps) + 1 / 3;
+        ctx.beginPath();
+        ctx.arc(width / 2, height / 2, width / 2.5, -Math.PI / 2, 3 * Math.PI / 2 * progress, true);
+        ctx.stroke();
+        
+        window.requestAnimationFrame(draw); 
+    }
+    
+    window.requestAnimationFrame(draw);
+});
+
+```
