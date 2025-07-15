@@ -64,3 +64,46 @@ onMounted(() => {
     });
 });
 </script>
+
+## Solution
+
+```html
+<div class="progress-container">
+    <div class="progress"></div>
+    <div class="content">...</div>
+</div>
+```
+
+```css
+.progress-container {
+    height: 150px; /* tunable: content height */
+    width: 300px; /* tunable: content width */
+    margin: auto;
+    overflow-y: scroll;
+    position: relative;
+}
+.progress {
+    height: 10px; /* tunable: progress bar height */
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: blue; /* tunable: progress bar color*/
+    transform: translateX(100%);
+}
+.content {
+    margin-top: 5px; /* tunable: distance to progress bar */
+}
+```
+
+```js
+const scrollBox = document.querySelector(".progress-container");
+const progressBar = document.querySelector(".progress");
+scrollBox.addEventListener("scroll", () => {
+    const scrollPosition = scrollBox.scrollTop;
+    const scrollDistance = scrollBox.scrollHeight - scrollBox.clientHeight;
+    const progress = scrollPosition / scrollDistance;
+    progressBar.style.transform = `translateX(${progress * 100 - 100}%)`;
+});
+```
+
+
