@@ -4,8 +4,8 @@ next:
   link: '/examples/typing-text'
 
 prev:
-  text: 'Float Effect'
-  link: '/examples/float-effect'
+  text: 'Progress Bar'
+  link: '/examples/progress-bar'
 ---
 
 # Spinner

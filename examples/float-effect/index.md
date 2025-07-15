@@ -1,7 +1,7 @@
 ---
 next:
-  text: 'Spinner'
-  link: '/examples/spinner'
+  text: 'Progress Bar'
+  link: '/examples/progress-bar'
 
 prev:
   text: 'Examples'
