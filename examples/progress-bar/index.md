@@ -65,7 +65,7 @@ onMounted(() => {
 });
 </script>
 
-## Solution
+### Solution
 
 ```html
 <div class="progress-container">
