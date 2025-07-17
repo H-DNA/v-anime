@@ -109,3 +109,4 @@ scrollBox.addEventListener("scroll", () => {
 ## Lessons Learned
 
 - CSSOM View Module: https://developer.mozilla.org/en-US/docs/Web/CSS/CSSOM_view
+- `sticky` positioning seems to only work after setting `top`
