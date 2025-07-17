@@ -116,7 +116,7 @@ This showcases some ways to build some simple toggle button.
 }
 ```
 
-## Lessons learned
+## Lessons Learned
 
 - CSS variables: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 - `calc` CSS function
