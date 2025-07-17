@@ -18,6 +18,7 @@ export default defineConfig({
           { text: 'Float Effect', link: '/examples/float-effect' },
           { text: 'Progress Bar', link: '/examples/progress-bar' },
           { text: 'Spinner', link: '/examples/spinner' },
+          { text: 'Toggle Button', link: '/examples/toggle-button' },
           { text: 'Typing Text', link: '/examples/typing-text' },
         ]
       }

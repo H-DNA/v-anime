@@ -1,7 +1,7 @@
 ---
 prev:
-  text: 'Spinner'
-  link: '/examples/spinner'
+  text: 'Toggle Button'
+  link: '/examples/toggle-button'
 ---
 
 # Typing Text

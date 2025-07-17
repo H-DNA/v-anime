@@ -1,7 +1,7 @@
 ---
 next:
-  text: 'Typing Text'
-  link: '/examples/typing-text'
+  text: 'Toggle Button'
+  link: '/examples/toggle-button'
 
 prev:
   text: 'Progress Bar'
