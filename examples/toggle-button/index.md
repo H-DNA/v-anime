@@ -36,6 +36,7 @@ This showcases some ways to build some simple toggle button.
         border-radius: var(--height);
         border: 1px solid gray;
         transition: background-color 0.3s ease;
+        cursor: pointer;
     }
     .toggle-button-container label .button-dot {
         position: relative;
@@ -90,6 +91,7 @@ This showcases some ways to build some simple toggle button.
     border-radius: var(--height);
     border: 1px solid gray;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 .toggle-button-container label .button-dot {
     position: relative;
